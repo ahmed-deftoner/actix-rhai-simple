@@ -22,7 +22,7 @@ async fn add(path : Path<(i64, i64)>) -> impl Responder {
 }
 
 #[get("/multiply/{num1}/{num2}")]
-async fn add(path : Path<(i64, i64)>) -> impl Responder {
+async fn multiply(path : Path<(i64, i64)>) -> impl Responder {
     let (num1, num2) = path.into_inner();
     let mut engine = Engine::new();
 
@@ -35,7 +35,7 @@ async fn add(path : Path<(i64, i64)>) -> impl Responder {
 }
 
 #[get("/divide/{num1}/{num2}")]
-async fn add(path : Path<(i64, i64)>) -> impl Responder {
+async fn divide(path : Path<(i64, i64)>) -> impl Responder {
     let (num1, num2) = path.into_inner();
     let mut engine = Engine::new();
 
@@ -48,7 +48,7 @@ async fn add(path : Path<(i64, i64)>) -> impl Responder {
 }
 
 #[get("/subtract/{num1}/{num2}")]
-async fn add(path : Path<(i64, i64)>) -> impl Responder {
+async fn subtract(path : Path<(i64, i64)>) -> impl Responder {
     let (num1, num2) = path.into_inner();
     let mut engine = Engine::new();
 
